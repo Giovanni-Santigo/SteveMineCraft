@@ -149,7 +149,6 @@ function Arriba() {
     var tr = 0.1, af = 45;
     if (Rot4 <= 1) {
         Rota3D.initRotate(obj.w[204], obj.w[205], af * Math.PI / 180);
-        //for (af = -0 ; af >= -45; af --){
         for (var i_1 = 1; i_1 <= 48; i_1++) {
             obj.w[i_1] = Rota3D.rotate(obj.w[i_1]);
         }
@@ -159,7 +158,6 @@ function Arriba() {
         for (var i_3 = 200; i_3 <= 205; i_3++) {
             obj.w[i_3] = Rota3D.rotate(obj.w[i_3]);
         }
-        //}
         Rot3--;
         Rot4++;
     }
@@ -177,23 +175,6 @@ function Arriba() {
 }
 function Abajo() {
     var tr = -0.1;
-    /*af = -45;
-    if(Rot4 <=1){
-    Rota3D.initRotate( obj.w[204], obj.w[205], af*Math.PI/180);
-    //for (af = -0 ; af >= -45; af --){
-    for (let i = 1; i <= 48; i++){
-      obj.w[i] = Rota3D.rotate(obj.w[i]);
-    }
-    for (let i = 70; i <= 81; i++){
-      obj.w[i] = Rota3D.rotate(obj.w[i]);
-    }
-    for (let i = 200; i <= 205; i++){
-      obj.w[i] = Rota3D.rotate(obj.w[i]);
-    }
-  //}
-  Rot3--;
-  Rot4++;
-}*/
     for (var i = 1; i <= 48; i++) {
         obj.w[i].x = obj.w[i].x + tr;
     }
@@ -211,7 +192,6 @@ function Izquierda() {
     var tr = -0.1, af = -45;
     if (Rot <= 1) {
         Rota3D.initRotate(obj.w[204], obj.w[205], af * Math.PI / 180);
-        //for (af = -0 ; af >= -45; af --){
         for (var i_4 = 1; i_4 <= 48; i_4++) {
             obj.w[i_4] = Rota3D.rotate(obj.w[i_4]);
         }
@@ -221,7 +201,6 @@ function Izquierda() {
         for (var i_6 = 200; i_6 <= 205; i_6++) {
             obj.w[i_6] = Rota3D.rotate(obj.w[i_6]);
         }
-        //}
         Rot++;
         Rot2--;
         if (Rot4 >= 1) {
@@ -244,7 +223,6 @@ function Derecha() {
     var tr = 0.1, af = 45;
     if (Rot2 <= 1) {
         Rota3D.initRotate(obj.w[204], obj.w[205], af * Math.PI / 180);
-        //for (af =0 ; af <=45; af ++){
         for (var i_7 = 1; i_7 <= 48; i_7++) {
             obj.w[i_7] = Rota3D.rotate(obj.w[i_7]);
         }
@@ -254,7 +232,6 @@ function Derecha() {
         for (var i_9 = 200; i_9 <= 205; i_9++) {
             obj.w[i_9] = Rota3D.rotate(obj.w[i_9]);
         }
-        //}
         Rot--;
         Rot2++;
         if (Rot4 >= 1) {
@@ -275,7 +252,6 @@ function Derecha() {
 }
 function Brincar() {
     var tr = 1;
-    //do{
     for (var i = 1; i <= 48; i++) {
         obj.w[i].z = obj.w[i].z + tr;
     }
@@ -287,11 +263,9 @@ function Brincar() {
     }
     cv.setObj(obj);
     cv.paint();
-    //}while (tr <=1);
 }
 function Agacharce() {
     var tr = -1;
-    //do{
     for (var i = 1; i <= 48; i++) {
         obj.w[i].z = obj.w[i].z + tr;
     }
@@ -303,7 +277,6 @@ function Agacharce() {
     }
     cv.setObj(obj);
     cv.paint();
-    //}while (tr <=1);
 }
 var up = false, jump = false, crouch = false, right = false, down = false, left = false, x = window.innerWidth / 2 - 130 / 2, y = window.innerHeight / 2 - 130 / 2;
 document.addEventListener('keydown', press);

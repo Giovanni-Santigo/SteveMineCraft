@@ -12,7 +12,7 @@ let graphics: CanvasRenderingContext2D;
 
 canvas = <HTMLCanvasElement>document.getElementById('circlechart');
 graphics = canvas.getContext('2d');
-let fondo = document.getElementById("src/fondo") as HTMLImageElement; 
+let fondo = document.getElementById("fondo") as HTMLImageElement; 
 
 let cv: CvHLines;
 let obj: Obj3D;

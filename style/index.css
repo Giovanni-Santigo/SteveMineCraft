@@ -10,7 +10,7 @@
   }
   #circlechart{
     /* background-color: red; */
-    background-image: url("/fondo.png");
+    background-image: url("../src/fondo.png");
     background-repeat: no-repeat;
     background-size: cover;
   }
